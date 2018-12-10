@@ -1,6 +1,6 @@
 <button class="success-story-accordion">NY Sales Recruiting Success Stories</button>
 <div class="success-story-panel">
-    <div class="success-story">
+    <div class="success-story-1-mobile">
         <div style="height: 268px;" class="background-img-1">
             <div style="height: 268px;" class="custom-testimonial-1" id="wrapper">
                 <img class="noSelect company-logo-1" align="right" src="/wp-content/uploads/2018/07/Eagles-Flight-Logo-opt-01.png">     
@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="success-story-2">
+    <div class="success-story-2-mobile">
         <div style="height: 268px;" class="background-img-2">
             <div style="height: 268px;" class="custom-testimonial" id="wrapper">
                 <img class="noSelect company-logo-2" align="right" src="/wp-content/uploads/2018/07/Avast-Logo-White_-opt-01.png">     
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="success-story-3">
+    <div class="success-story-3-mobile">
         <div style="height: 268px;" class="background-img-3">
             <div style="height: 268px;" class="custom-testimonial-3" id="wrapper">
                 <img class="noSelect company-logo" align="right" src="/wp-content/uploads/2018/07/elemex-white-logo-opt-01.png">        
@@ -32,7 +32,7 @@
     .success-stories-mobile-section{
         display: none !important;
     }
-    .success-story{
+    .success-story-1-mobile{
         position: relative; 
         top: 0px; 
         display: block; 
@@ -108,12 +108,22 @@
             display: none;
             overflow: hidden;
         }
+        .success-story-accordion:after {
+            content: '+'; 
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+          content: "-";
+        }
     }
 </style>
 <style>
-    .success-story-2{
+    .success-story-2-mobile{
         position: relative; 
-        top: 0px; 
+        top: 5px; 
         display: block; 
         height: 268px; 
         width: 100%; 
@@ -166,7 +176,7 @@
         }
 </style>
 <style>
-    .success-story-3{
+    .success-story-3-mobile{
         position: relative; 
         top: 0px; 
         display: block; 

@@ -1,22 +1,22 @@
 <button class="industry-insights-accordion">Latest Industy Insights</button>
 <div class="industry-insights-panel">
-    <div class="industry-insights">
+    <div class="industry-insights-mobile">
     </div>
-    <div class="industry-insights-text">
+    <div class="industry-insights-text-mobile">
         <p class="insight-header">HOW TO GET THE JOB YOU WANT: SECRETS</p>
         <p class="insight-paragraph">If you've ever wondered what top sales leaders are looking for when they're hiring actionable insights.</p>
         <a class="regional-button" href="/benefits">LEARN MORE</a>
     </div>
-    <div class="industry-insights">
+    <div class="industry-insights-mobile">
     </div>
-    <div class="industry-insights-text">
+    <div class="industry-insights-text-mobile">
         <p class="insight-header">HOW TO GET THE JOB YOU WANT: SECRETS</p>
         <p class="insight-paragraph">If you've ever wondered what top sales leaders are looking for when they're hiring actionable insights.</p>
         <a class="regional-button" href="/benefits">LEARN MORE</a>
     </div>
 </div>
 <style>
-    .industry-insights{
+    .industry-insights-mobile{
         display: block;
         position: relative;
         top: 10px; 
@@ -50,8 +50,8 @@
         .industry-insights-mobile-section{
             display: block !important;
         }
-        .industry-insights-text{
-            padding-top: 10px;
+        .industry-insights-text-mobile{
+            padding-top: 20px;
         }
         .industry-insights-accordion {
             background-color: #6eba57;
@@ -73,6 +73,16 @@
             background-color: white;
             display: none;
             overflow: hidden;
+        }
+        .industry-insights-accordion:after {
+            content: '+'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+          content: "-"; /* Unicode character for "minus" sign (-) */
         }
     }
 </style>
