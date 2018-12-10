@@ -1,0 +1,97 @@
+<button class="industry-insights-accordion">Latest Industy Insights</button>
+<div class="industry-insights-panel">
+    <div class="industry-insights">
+    </div>
+    <div class="industry-insights-text">
+        <p class="insight-header">HOW TO GET THE JOB YOU WANT: SECRETS</p>
+        <p class="insight-paragraph">If you've ever wondered what top sales leaders are looking for when they're hiring actionable insights.</p>
+        <a class="regional-button" href="/benefits">LEARN MORE</a>
+    </div>
+    <div class="industry-insights">
+    </div>
+    <div class="industry-insights-text">
+        <p class="insight-header">HOW TO GET THE JOB YOU WANT: SECRETS</p>
+        <p class="insight-paragraph">If you've ever wondered what top sales leaders are looking for when they're hiring actionable insights.</p>
+        <a class="regional-button" href="/benefits">LEARN MORE</a>
+    </div>
+</div>
+<style>
+    .industry-insights{
+        display: block;
+        position: relative;
+        top: 10px; 
+        height: 218px; 
+        width: 100%; 
+        max-width: 440px; 
+        margin: 0 auto;
+        padding-bottom: 10px;
+        background-color: #1b4912; 
+        font-size: 0.85rem; 
+        color: white !important; 
+        line-height: normal;
+        background-image: url('/wp-content/uploads/2018/07/Chris-Evans-440-opt-01.jpg');
+    }
+    .industry-insights-mobile-section{
+        display: none !important;
+    }
+    .insight-header{
+        font-size: 1.0rem;
+        line-height: 1.2rem;
+    }
+    .regional-button{
+        color: black;
+        border-bottom: 3px solid #6eba57;
+        font-size: 14px;
+    }
+    .insight-paragraph{
+        font-size: 14px;
+    }    
+    @media screen and (max-width: 500px) {
+        .industry-insights-mobile-section{
+            display: block !important;
+        }
+        .industry-insights-text{
+            padding-top: 10px;
+        }
+        .industry-insights-accordion {
+            background-color: #6eba57;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .active, .industry-insights-accordion:hover {
+            background-color: #90EE90;
+        }
+        .industry-insights-panel {
+            padding-top: 0px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+    }
+</style>
+<script>
+var acc = document.getElementsByClassName("industry-insights-accordion");
+
+for ( var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
