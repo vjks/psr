@@ -1,0 +1,126 @@
+<button class="industry-insights-accordion">Latest Industy Insights</button>
+<div class="industry-insights-panel">
+    <a href="/bostons-sales-hiring-landscape/"> 
+        <div class="industry-insights-mobile-1">
+        </div>
+    </a>
+    <div class="industry-insights-text-mobile">
+        <p class="insight-header">A Dive into Boston’s Sales Hiring Landscape</p>
+        <p class="insight-paragraph">In Boston, the war over top sales talent is heating up.</p>
+        <a class="regional-button" href="/bostons-sales-hiring-landscape/">LEARN MORE</a>
+    </div>
+    <a href="/b2b-sales-changing/">
+        <div class="industry-insights-mobile-2">
+        </div>
+    </a>
+    <div class="industry-insights-text-mobile">
+        <p class="insight-header">B2B Sales: 7 Ways It’s Changing Fast</p>
+        <p class="insight-paragraph">Millennials, big data, and AI are fundamentally impacting the B2B sales industry.</p>
+        <a class="regional-button" href="/b2b-sales-changing/">LEARN MORE</a>
+    </div>
+</div>
+<style>
+    .industry-insights-mobile-1{
+        display: block;
+        position: relative;
+        top: 10px; 
+        height: 218px; 
+        width: 100%; 
+        max-width: 440px; 
+        margin: 0 auto;
+        padding-bottom: 10px;
+        background-color: #1b4912; 
+        font-size: 0.85rem; 
+        color: white !important; 
+        line-height: normal;
+        background-image: url('/wp-content/uploads/2015/10/Bostons-Sales-Hiring-Overview.jpg');
+    }
+    .industry-insights-mobile-2{
+        display: block;
+        position: relative;
+        top: 10px; 
+        height: 218px; 
+        width: 100%; 
+        max-width: 440px; 
+        margin: 0 auto;
+        padding-bottom: 10px;
+        background-color: #1b4912; 
+        font-size: 0.85rem; 
+        color: white !important; 
+        line-height: normal;
+        background-image: url('/wp-content/uploads/2018/12/B2B-Sales-Changing-Fast.png');
+    }
+    .industry-insights-mobile-section{
+        display: none !important;
+    }
+    .insight-header{
+        font-size: 1.0rem;
+        line-height: 1.2rem;
+    }
+    .regional-button{
+        color: black;
+        border-bottom: 3px solid #6eba57;
+        font-size: 14px;
+    }
+    .insight-paragraph{
+        font-size: 14px;
+    }    
+    @media screen and (max-width: 500px) {
+        .industry-insights-mobile-section{
+            display: block !important;
+        }
+        .industry-insights-text-mobile{
+            padding-top: 20px;
+        }
+        .industry-insights-accordion {
+            background-color: #6eba57;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .active, .industry-insights-accordion:hover {
+            background-color: #90EE90;
+        }
+        .industry-insights-panel {
+            padding-top: 0px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+        .industry-insights-accordion:after {
+            content: '+'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+          content: "-"; /* Unicode character for "minus" sign (-) */
+        }
+    }
+</style>
+<script>
+var acc = document.getElementsByClassName("industry-insights-accordion");
+
+for ( var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
